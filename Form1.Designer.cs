@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.BT_H_ausf = new System.Windows.Forms.Button();
-			this.H_einf = new System.Windows.Forms.Button();
+			this.BT_H_einf = new System.Windows.Forms.Button();
 			this.BT_A_ausf = new System.Windows.Forms.Button();
 			this.BT_A_einf = new System.Windows.Forms.Button();
 			this.BT_KA_r = new System.Windows.Forms.Button();
@@ -58,17 +58,17 @@
 			this.BT_H_ausf.UseVisualStyleBackColor = false;
 			this.BT_H_ausf.Click += new System.EventHandler(this.BT_H_ausf_Click);
 			// 
-			// H_einf
+			// BT_H_einf
 			// 
-			this.H_einf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.H_einf.Location = new System.Drawing.Point(39, 71);
-			this.H_einf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.H_einf.Name = "H_einf";
-			this.H_einf.Size = new System.Drawing.Size(125, 31);
-			this.H_einf.TabIndex = 1;
-			this.H_einf.Text = "H_einf";
-			this.H_einf.UseVisualStyleBackColor = false;
-			this.H_einf.Click += new System.EventHandler(this.H_einf_Click);
+			this.BT_H_einf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.BT_H_einf.Location = new System.Drawing.Point(39, 71);
+			this.BT_H_einf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.BT_H_einf.Name = "BT_H_einf";
+			this.BT_H_einf.Size = new System.Drawing.Size(125, 31);
+			this.BT_H_einf.TabIndex = 1;
+			this.BT_H_einf.Text = "H_einf";
+			this.BT_H_einf.UseVisualStyleBackColor = false;
+			this.BT_H_einf.Click += new System.EventHandler(this.BT_H_einf_Click);
 			// 
 			// BT_A_ausf
 			// 
@@ -157,7 +157,7 @@
 			this.panel1.Controls.Add(this.BT_KA_r);
 			this.panel1.Controls.Add(this.BT_A_einf);
 			this.panel1.Controls.Add(this.BT_A_ausf);
-			this.panel1.Controls.Add(this.H_einf);
+			this.panel1.Controls.Add(this.BT_H_einf);
 			this.panel1.Controls.Add(this.BT_H_ausf);
 			this.panel1.Location = new System.Drawing.Point(603, 28);
 			this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -188,6 +188,7 @@
 			this.BT_Mright.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.BT_Mright.Name = "BT_Mright";
 			this.BT_Mright.Size = new System.Drawing.Size(57, 31);
+			this.BT_Mright.TabIndex = 10;
 			this.BT_Mright.Text = "-->";
 			this.BT_Mright.UseVisualStyleBackColor = false;
 			this.BT_Mright.Click += new System.EventHandler(this.BT_Mright_Click);
@@ -249,7 +250,7 @@
 		#endregion
 
 		private System.Windows.Forms.Button BT_H_ausf;
-		private System.Windows.Forms.Button H_einf;
+		private System.Windows.Forms.Button BT_H_einf;
 		private System.Windows.Forms.Button BT_A_ausf;
 		private System.Windows.Forms.Button BT_A_einf;
 		private System.Windows.Forms.Button BT_KA_r;

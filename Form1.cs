@@ -8,6 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*	Einzige Kommentarzeilen:
+ *	einfach:	[in den Entwurfsmodus wechseln (doppleklick auf Form1.cs),
+ *				dann schauen wie die Knöpfe und Panels heißen...]
+ *				
+ *	ausführlich:
+ *	Buttons:
+ *	BT_KA_l		::= Kranausleger links
+ *	BT_KA_r		::= Kranausleger rechts
+ *	BT_H_ausf	::= Haken ausfahren
+ *	BT_H_einf	::= Haken einfahren
+ *	BT_A_ausf	::= Ausleger ausfahren
+ *	BT_A_einf	::= Ausleger einfahren
+ *	BT_K_ausf	::= Kran ausfahren
+ *	BT_K_einf	::= Kran einfahren
+ *	BT_Mleft	::= nach links fahren
+ *	BT_Mright	::= nach rechts fahren
+ *	
+ *	Panels:
+ *	P_Hg ::= Haken (grün)
+ *	P_Ab ::= Ausleger (blau)
+ *	P_Kg ::= Kran (gelb)
+ *	P_Fr ::= Fundament (rot)
+ *	
+ *	Wesentliche Bewengungsmanipulation findet über die Points statt, die aus den 
+ *	Forms ausgelesen, manipuliert und wieder zurück geschrieben werden.
+ */
+
 namespace WindowsFormsKranABS
 {
 	public partial class Form1 : Form
@@ -21,7 +48,7 @@ namespace WindowsFormsKranABS
 		private void BT_KA_r_Click(object sender, EventArgs e)
 
 		{
-			int width = ActiveForm.Width -177;
+			int width = ActiveForm.Width -177; //effektiver Anzeigebereich
 			if (P_Ab.Location.X + P_Ab.Width < width - P_Ab.Width)
 				while (KA_l)
 				{
@@ -54,7 +81,7 @@ namespace WindowsFormsKranABS
 			if (!(P_Ab.Width <= 60 && P_Hg.Height <= P_Kg.Height))  
 			P_Hg.Height += 10;
 		}
-		private void H_einf_Click(object sender, EventArgs e)
+		private void BT_H_einf_Click(object sender, EventArgs e)
 		{
 			if (P_Hg.Height > 40)
 			P_Hg.Height -= 10;
