@@ -44,9 +44,10 @@ namespace WindowsFormsKranABS
 			InitializeComponent();
 		}
 
+		public bool started = false;
 		public bool KA_l = true;
+		
 		private void BT_KA_r_Click(object sender, EventArgs e)
-
 		{
 			int width = ActiveForm.Width -177; //effektiver Anzeigebereich
 			if (P_Ab.Location.X + P_Ab.Width < width - P_Ab.Width)
@@ -216,5 +217,115 @@ namespace WindowsFormsKranABS
 				P_Fr.Location = actualPointFr;
 			}
 		}
+		// Hier folgt die Ergänzng aus der Erweiterungsaufgabe des Krans!
+		
+		private bool TB_A_ausf, TB_A_einf;
+		private bool TB_H_ausf, TB_H_einf;
+		private bool TB_K_ausf, TB_K_einf;
+		private bool TB_Mleft, TB_Mright;
+
+		private void MoveByTimer_Tick_Event (object sender,EventArgs e)
+		{	// Hier wird unterschieden, was bewegt werden soll
+			if (TB_A_ausf)
+				BT_A_ausf_Click(sender, e);
+			else if (TB_A_einf)
+				BT_A_einf_Click(sender, e);
+			else if (TB_H_ausf)
+				BT_H_ausf_Click(sender, e);
+			else if (TB_H_einf)
+				BT_H_einf_Click(sender, e);
+			else if (TB_K_ausf)
+				BT_K_ausf_Click(sender, e);
+			else if (TB_K_einf)
+				BT_K_einf_Click(sender, e);
+			else if (TB_Mleft)
+				BT_Mleft_Click(sender, e);
+			else if (TB_Mright)
+				BT_Mleft_Click(sender, e);
+
+		}
+
+
+		private void RB_Ausl_ausf_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_A_ausf = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_A_ausf = false;
+		}
+
+		private void RB_Ausl_einf_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_A_einf = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_A_einf = false;
+		}
+
+		private void RB_H_ausf_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_H_ausf = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_H_ausf = false;
+		}
+
+		private void RB_H_einf_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_H_einf = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_H_einf = false;
+		}
+
+		private void RB_K_ausf_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_K_ausf = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_K_ausf = false;
+		}
+
+		private void RB_K_einf_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_K_einf = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_K_einf = false;
+		}
+
+		private void RB_Mleft_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_Mleft = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_Mleft = false;
+		}
+
+		private void RB_Mright_CheckedChanged(object sender, EventArgs e)
+		{
+			TB_Mright = true;
+			while (T_Kran.Enabled)
+			T_Kran_Tick(sender, e);
+			TB_Mright = false;
+		}
+
+		private void BT_Start_Click(object sender, EventArgs e)
+		{
+			T_Kran.Enabled = true;
+		}
+
+		private void BT_Stop_Click(object sender, EventArgs e)
+		{
+			T_Kran.Enabled = false; 
+		}
+
+		private void T_Kran_Tick(object sender, EventArgs e)
+		{
+			MoveByTimer_Tick_Event(sender, e);
+		}
+
+		
+		
 	}
 }
