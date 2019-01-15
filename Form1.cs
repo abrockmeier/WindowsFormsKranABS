@@ -60,6 +60,7 @@ namespace WindowsFormsKranABS
 					P_Ab.Location.Y);
 					P_Ab.Location = actualPointAb;
 					KA_l = false;
+					FalseAll();
 				}
 		}
 		private void BT_KA_l_Click(object sender, EventArgs e)
@@ -74,6 +75,7 @@ namespace WindowsFormsKranABS
 					P_Ab.Location.Y);
 					P_Ab.Location = actualPointAb;
 					KA_l = true;
+					FalseAll();
 				}
 		}
 		private void BT_H_ausf_Click(object sender, EventArgs e)
@@ -241,73 +243,161 @@ namespace WindowsFormsKranABS
 			else if (TB_Mleft)
 				BT_Mleft_Click(sender, e);
 			else if (TB_Mright)
-				BT_Mleft_Click(sender, e);
-
+				BT_Mright_Click(sender, e);
 		}
 
 
 		private void RB_Ausl_ausf_CheckedChanged(object sender, EventArgs e)
 		{
-			TB_A_ausf = true;
+			T_Kran.Enabled = false;
+			{
+				if (KA_l)
+				{
+					TB_A_ausf = true;
+					TB_A_einf = false;
+				}
+				else
+				{
+					TB_A_ausf = false;
+					TB_A_einf = true;
+				}
+				TB_H_ausf = false;
+				TB_H_einf = false;
+				TB_K_ausf = false;
+				TB_K_einf = false;
+				TB_Mleft = false;
+				TB_Mright = false;
+			}
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_A_ausf = false;
 		}
 
 		private void RB_Ausl_einf_CheckedChanged(object sender, EventArgs e)
 		{
-			TB_A_einf = true;
+			T_Kran.Enabled = false;
+			{
+				if (!KA_l)
+				{
+					TB_A_ausf = true;
+					TB_A_einf = false;
+				}
+				else
+				{
+					TB_A_ausf = false;
+					TB_A_einf = true;
+				}
+				TB_H_ausf = false;
+				TB_H_einf = false;
+				TB_K_ausf = false;
+				TB_K_einf = false;
+				TB_Mleft = false;
+				TB_Mright = false;
+			}
+			
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_A_einf = false;
 		}
 
 		private void RB_H_ausf_CheckedChanged(object sender, EventArgs e)
-		{
-			TB_H_ausf = true;
+		{	
+			T_Kran.Enabled = false;
+			{
+				TB_A_ausf = false;
+				TB_A_einf = false;
+				TB_H_ausf = true;
+				TB_H_einf = false;
+				TB_K_ausf = false;
+				TB_K_einf = false;
+				TB_Mleft = false;
+				TB_Mright = false;
+			}
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_H_ausf = false;
 		}
 
 		private void RB_H_einf_CheckedChanged(object sender, EventArgs e)
-		{
-			TB_H_einf = true;
+		{	
+			T_Kran.Enabled = false;
+			{
+				TB_A_ausf = false;
+				TB_A_einf = false;
+				TB_H_ausf = false;
+				TB_H_einf = true;
+				TB_K_ausf = false;
+				TB_K_einf = false;
+				TB_Mleft = false;
+				TB_Mright = false;
+			}
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_H_einf = false;
 		}
 
 		private void RB_K_ausf_CheckedChanged(object sender, EventArgs e)
-		{
-			TB_K_ausf = true;
+		{	
+			T_Kran.Enabled = false;
+			{
+				TB_A_ausf = false;
+				TB_A_einf = false;
+				TB_H_ausf = false;
+				TB_H_einf = false;
+				TB_K_ausf = true;
+				TB_K_einf = false;
+				TB_Mleft = false;
+				TB_Mright = false;
+			}
+			
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_K_ausf = false;
 		}
 
 		private void RB_K_einf_CheckedChanged(object sender, EventArgs e)
 		{
-			TB_K_einf = true;
+			T_Kran.Enabled = false;
+			{
+				TB_A_ausf = false;
+				TB_A_einf = false;
+				TB_H_ausf = false;
+				TB_H_einf = false;
+				TB_K_ausf = false;
+				TB_K_einf = true;
+				TB_Mleft = false;
+				TB_Mright = false;
+			}
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_K_einf = false;
 		}
 
 		private void RB_Mleft_CheckedChanged(object sender, EventArgs e)
 		{
-			TB_Mleft = true;
+			T_Kran.Enabled = false;
+			{
+				TB_A_ausf = false;
+				TB_A_einf = false;
+				TB_H_ausf = false;
+				TB_H_einf = false;
+				TB_K_ausf = false;
+				TB_K_einf = false;
+				TB_Mleft = true;
+				TB_Mright = false;
+			}
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_Mleft = false;
 		}
 
 		private void RB_Mright_CheckedChanged(object sender, EventArgs e)
-		{
-			TB_Mright = true;
+		{	
+			{
+				TB_A_ausf = false;
+				TB_A_einf = false;
+				TB_H_ausf = false;
+				TB_H_einf = false;
+				TB_K_ausf = false;
+				TB_K_einf = false;
+				TB_Mleft = false;
+				TB_Mright = true;
+			}
 			while (T_Kran.Enabled)
 			T_Kran_Tick(sender, e);
-			TB_Mright = false;
 		}
 
 		private void BT_Start_Click(object sender, EventArgs e)
@@ -317,7 +407,20 @@ namespace WindowsFormsKranABS
 
 		private void BT_Stop_Click(object sender, EventArgs e)
 		{
-			T_Kran.Enabled = false; 
+			T_Kran.Enabled = false;
+			FalseAll();
+		}
+
+		private void FalseAll()
+		{
+			RB_Ausl_ausf.Checked = false;
+			RB_Ausl_einf.Checked = false;
+			RB_H_ausf.Checked = false;
+			RB_H_einf.Checked = false;
+			RB_K_ausf.Checked = false;
+			RB_K_einf.Checked = false;
+			RB_Mleft.Checked = false;
+			RB_Mright.Checked = false;
 		}
 
 		private void T_Kran_Tick(object sender, EventArgs e)

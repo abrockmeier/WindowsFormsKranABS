@@ -31,8 +31,8 @@
 			this.components = new System.ComponentModel.Container();
 			this.BT_H_ausf = new System.Windows.Forms.Button();
 			this.BT_H_einf = new System.Windows.Forms.Button();
-			this.BT_A_ausf = new System.Windows.Forms.Button();
-			this.BT_A_einf = new System.Windows.Forms.Button();
+			this.BT_A_links = new System.Windows.Forms.Button();
+			this.BT_A_rechts = new System.Windows.Forms.Button();
 			this.BT_KA_r = new System.Windows.Forms.Button();
 			this.BT_KA_l = new System.Windows.Forms.Button();
 			this.BT_K_ausf = new System.Windows.Forms.Button();
@@ -82,42 +82,42 @@
 			this.BT_H_einf.UseVisualStyleBackColor = false;
 			this.BT_H_einf.Click += new System.EventHandler(this.BT_H_einf_Click);
 			// 
-			// BT_A_ausf
+			// BT_A_links
 			// 
-			this.BT_A_ausf.BackColor = System.Drawing.Color.SteelBlue;
-			this.BT_A_ausf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.BT_A_ausf.Location = new System.Drawing.Point(0, 9);
-			this.BT_A_ausf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.BT_A_ausf.Name = "BT_A_ausf";
-			this.BT_A_ausf.Size = new System.Drawing.Size(58, 31);
-			this.BT_A_ausf.TabIndex = 2;
-			this.BT_A_ausf.Text = "A_ausf";
-			this.BT_A_ausf.UseVisualStyleBackColor = false;
-			this.BT_A_ausf.Click += new System.EventHandler(this.BT_A_ausf_Click);
+			this.BT_A_links.BackColor = System.Drawing.Color.SteelBlue;
+			this.BT_A_links.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.BT_A_links.Location = new System.Drawing.Point(0, 9);
+			this.BT_A_links.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.BT_A_links.Name = "BT_A_links";
+			this.BT_A_links.Size = new System.Drawing.Size(58, 31);
+			this.BT_A_links.TabIndex = 2;
+			this.BT_A_links.Text = "<-- A";
+			this.BT_A_links.UseVisualStyleBackColor = false;
+			this.BT_A_links.Click += new System.EventHandler(this.BT_A_ausf_Click);
 			// 
-			// BT_A_einf
+			// BT_A_rechts
 			// 
-			this.BT_A_einf.BackColor = System.Drawing.Color.SteelBlue;
-			this.BT_A_einf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.BT_A_einf.Location = new System.Drawing.Point(131, 32);
-			this.BT_A_einf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.BT_A_einf.Name = "BT_A_einf";
-			this.BT_A_einf.Size = new System.Drawing.Size(55, 31);
-			this.BT_A_einf.TabIndex = 3;
-			this.BT_A_einf.Text = "A_einf";
-			this.BT_A_einf.UseVisualStyleBackColor = false;
-			this.BT_A_einf.Click += new System.EventHandler(this.BT_A_einf_Click);
+			this.BT_A_rechts.BackColor = System.Drawing.Color.SteelBlue;
+			this.BT_A_rechts.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.BT_A_rechts.Location = new System.Drawing.Point(131, 32);
+			this.BT_A_rechts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.BT_A_rechts.Name = "BT_A_rechts";
+			this.BT_A_rechts.Size = new System.Drawing.Size(55, 31);
+			this.BT_A_rechts.TabIndex = 3;
+			this.BT_A_rechts.Text = "A -->";
+			this.BT_A_rechts.UseVisualStyleBackColor = false;
+			this.BT_A_rechts.Click += new System.EventHandler(this.BT_A_einf_Click);
 			// 
 			// BT_KA_r
 			// 
 			this.BT_KA_r.BackColor = System.Drawing.Color.SteelBlue;
 			this.BT_KA_r.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.BT_KA_r.Location = new System.Drawing.Point(118, 168);
+			this.BT_KA_r.Location = new System.Drawing.Point(99, 168);
 			this.BT_KA_r.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.BT_KA_r.Name = "BT_KA_r";
-			this.BT_KA_r.Size = new System.Drawing.Size(55, 31);
+			this.BT_KA_r.Size = new System.Drawing.Size(74, 31);
 			this.BT_KA_r.TabIndex = 4;
-			this.BT_KA_r.Text = "A ->";
+			this.BT_KA_r.Text = "A <>>";
 			this.BT_KA_r.UseVisualStyleBackColor = false;
 			this.BT_KA_r.Click += new System.EventHandler(this.BT_KA_r_Click);
 			// 
@@ -128,9 +128,9 @@
 			this.BT_KA_l.Location = new System.Drawing.Point(3, 168);
 			this.BT_KA_l.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.BT_KA_l.Name = "BT_KA_l";
-			this.BT_KA_l.Size = new System.Drawing.Size(58, 31);
+			this.BT_KA_l.Size = new System.Drawing.Size(72, 31);
 			this.BT_KA_l.TabIndex = 5;
-			this.BT_KA_l.Text = "<- A";
+			this.BT_KA_l.Text = "<<> A";
 			this.BT_KA_l.UseVisualStyleBackColor = false;
 			this.BT_KA_l.Click += new System.EventHandler(this.BT_KA_l_Click);
 			// 
@@ -169,10 +169,10 @@
 			this.panel1.Controls.Add(this.RB_Ausl_einf);
 			this.panel1.Controls.Add(this.BT_Mright);
 			this.panel1.Controls.Add(this.RB_Ausl_ausf);
-			this.panel1.Controls.Add(this.BT_A_einf);
+			this.panel1.Controls.Add(this.BT_A_rechts);
 			this.panel1.Controls.Add(this.RB_K_einf);
 			this.panel1.Controls.Add(this.BT_Mleft);
-			this.panel1.Controls.Add(this.BT_A_ausf);
+			this.panel1.Controls.Add(this.BT_A_links);
 			this.panel1.Controls.Add(this.BT_H_einf);
 			this.panel1.Controls.Add(this.BT_H_ausf);
 			this.panel1.Controls.Add(this.RB_H_ausf);
@@ -181,7 +181,7 @@
 			this.panel1.Controls.Add(this.BT_KA_l);
 			this.panel1.Controls.Add(this.BT_K_ausf);
 			this.panel1.Controls.Add(this.BT_KA_r);
-			this.panel1.Location = new System.Drawing.Point(603, 28);
+			this.panel1.Location = new System.Drawing.Point(615, 26);
 			this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(186, 402);
@@ -192,11 +192,11 @@
 			this.RB_Mright.AutoSize = true;
 			this.RB_Mright.Location = new System.Drawing.Point(92, 328);
 			this.RB_Mright.Name = "RB_Mright";
-			this.RB_Mright.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.RB_Mright.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.RB_Mright.Size = new System.Drawing.Size(81, 21);
 			this.RB_Mright.TabIndex = 21;
 			this.RB_Mright.TabStop = true;
-			this.RB_Mright.Text = "<-- Kran";
+			this.RB_Mright.Text = "Kran -->";
 			this.RB_Mright.UseVisualStyleBackColor = true;
 			this.RB_Mright.CheckedChanged += new System.EventHandler(this.RB_Mright_CheckedChanged);
 			// 
@@ -249,11 +249,11 @@
 			this.RB_Ausl_einf.AutoSize = true;
 			this.RB_Ausl_einf.Location = new System.Drawing.Point(29, 37);
 			this.RB_Ausl_einf.Name = "RB_Ausl_einf";
-			this.RB_Ausl_einf.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.RB_Ausl_einf.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.RB_Ausl_einf.Size = new System.Drawing.Size(97, 21);
 			this.RB_Ausl_einf.TabIndex = 13;
 			this.RB_Ausl_einf.TabStop = true;
-			this.RB_Ausl_einf.Text = "< Ausleger";
+			this.RB_Ausl_einf.Text = "Ausleger >";
 			this.RB_Ausl_einf.UseVisualStyleBackColor = true;
 			this.RB_Ausl_einf.CheckedChanged += new System.EventHandler(this.RB_Ausl_einf_CheckedChanged);
 			// 
@@ -287,11 +287,11 @@
 			this.RB_K_einf.AutoSize = true;
 			this.RB_K_einf.Location = new System.Drawing.Point(96, 231);
 			this.RB_K_einf.Name = "RB_K_einf";
-			this.RB_K_einf.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.RB_K_einf.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.RB_K_einf.Size = new System.Drawing.Size(71, 21);
 			this.RB_K_einf.TabIndex = 17;
 			this.RB_K_einf.TabStop = true;
-			this.RB_K_einf.Text = "/\\ Kran";
+			this.RB_K_einf.Text = "Kran \\/";
 			this.RB_K_einf.UseVisualStyleBackColor = true;
 			this.RB_K_einf.CheckedChanged += new System.EventHandler(this.RB_K_einf_CheckedChanged);
 			// 
@@ -314,11 +314,11 @@
 			this.RB_H_ausf.AutoSize = true;
 			this.RB_H_ausf.Location = new System.Drawing.Point(94, 82);
 			this.RB_H_ausf.Name = "RB_H_ausf";
-			this.RB_H_ausf.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.RB_H_ausf.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.RB_H_ausf.Size = new System.Drawing.Size(82, 21);
 			this.RB_H_ausf.TabIndex = 11;
 			this.RB_H_ausf.TabStop = true;
-			this.RB_H_ausf.Text = "/\\ Haken";
+			this.RB_H_ausf.Text = "Haken \\/";
 			this.RB_H_ausf.UseVisualStyleBackColor = true;
 			this.RB_H_ausf.CheckedChanged += new System.EventHandler(this.RB_H_ausf_CheckedChanged);
 			// 
@@ -379,7 +379,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(790, 450);
+			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.P_Hg);
 			this.Controls.Add(this.P_Ab);
 			this.Controls.Add(this.P_Kg);
@@ -398,8 +398,8 @@
 
 		private System.Windows.Forms.Button BT_H_ausf;
 		private System.Windows.Forms.Button BT_H_einf;
-		private System.Windows.Forms.Button BT_A_ausf;
-		private System.Windows.Forms.Button BT_A_einf;
+		private System.Windows.Forms.Button BT_A_links;
+		private System.Windows.Forms.Button BT_A_rechts;
 		private System.Windows.Forms.Button BT_KA_r;
 		private System.Windows.Forms.Button BT_KA_l;
 		private System.Windows.Forms.Button BT_K_ausf;
