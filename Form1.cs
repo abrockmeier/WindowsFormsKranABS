@@ -230,19 +230,19 @@ namespace WindowsFormsKranABS
 		{	// Hier wird unterschieden, was bewegt werden soll
 			if (TB_A_ausf)
 				BT_A_ausf_Click(sender, e);
-			else if (TB_A_einf)
+			if (TB_A_einf)
 				BT_A_einf_Click(sender, e);
-			else if (TB_H_ausf)
+			if (TB_H_ausf)
 				BT_H_ausf_Click(sender, e);
-			else if (TB_H_einf)
+			if (TB_H_einf)
 				BT_H_einf_Click(sender, e);
-			else if (TB_K_ausf)
+			if (TB_K_ausf)
 				BT_K_ausf_Click(sender, e);
-			else if (TB_K_einf)
+			if (TB_K_einf)
 				BT_K_einf_Click(sender, e);
-			else if (TB_Mleft)
+			if (TB_Mleft)
 				BT_Mleft_Click(sender, e);
-			else if (TB_Mright)
+			if (TB_Mright)
 				BT_Mright_Click(sender, e);
 		}
 
@@ -428,7 +428,8 @@ namespace WindowsFormsKranABS
 			MoveByTimer_Tick_Event(sender, e);
 		}
 
-		
-		
+		// Stop und toggle...
+		// else @ stop /... start ... <--- links
+		// Radio button an lassen und am Rand stoppen und Auswahlrichtung ändern..
 	}
 }
